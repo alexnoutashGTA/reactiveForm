@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
     this.usersService.getUsers()
       .subscribe(receivedUsers => {
         this.users = receivedUsers;
+        this.usersService.users=this.users;
         this.currentUser = this.users[0];
       });
   }
