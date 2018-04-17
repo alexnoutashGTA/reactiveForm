@@ -18,7 +18,7 @@ describe('UserComponent', () => {
       imports: [
         ReactiveFormsModule, HttpClientModule
       ],
-      providers: [ UserComponent, UsersService]
+      providers: [UsersService]
     })
       .compileComponents();
   }));
