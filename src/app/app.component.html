@@ -1,0 +1,4 @@
+<button *ngFor="let user of users" (click)="changeCurrentUser($event, user)">{{user.name}}</button>
+<div *ngIf="initialized">
+  <app-user [user]="currentUser"></app-user>
+</div>

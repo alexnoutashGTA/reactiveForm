@@ -1,0 +1,19 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit(user)">
+  <div>
+    <label for="name">Name</label>
+    <input formControlName="name" type="text" id="name" required>
+  </div>
+
+  <div>
+    <label for="email">E-mail</label>
+    <input formControlName="email" type="email" id="email">
+  </div>
+
+  <div>
+    <label for="email">City</label>
+    <input formControlName="city" type="city" id="city" [(ngModel)]="user.address.city">
+  </div>
+
+  <button [disabled]="!userForm.valid" type="submit" >Save</button>
+</form>
+
