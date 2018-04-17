@@ -12,6 +12,7 @@ export class UserComponent {
 
   userForm: FormGroup;
   onSubmit(user: User) {
+    user.address.city = this.userForm.get('city').value;
     this.usersService.saveUser(user).subscribe(
       val => {
         console.log('PUT call successful value returned in body',
